@@ -1,0 +1,254 @@
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+
+.itc-slider {
+  position: relative;
+  margin: 70px 0 0 0;
+}
+
+.itc-slider-wrapper {
+  overflow: hidden;
+}
+
+.itc-slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.itc-slider-transition-none {
+  transition: none;
+}
+
+.itc-slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+}
+
+/* кнопки влево и вправо */
+.itc-slider-btn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.itc-slider-btn-hide {
+  display: none;
+}
+
+.itc-slider-btn-prev {
+  left: -28px;
+}
+
+.itc-slider-btn-next {
+  right: -28px;
+}
+
+.itc-slider-btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+/* индикаторы */
+.itc-slider-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.itc-slider-indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(71, 165, 66, 1);
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  cursor: pointer;
+}
+
+.itc-slider-indicator-active {
+  background-color: rgba(192, 217, 184, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container__slider {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container__slider {
+    max-width: 710px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container__slider {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.itc-slider {
+  /* overflow: hidden; */
+}
+
+.itc-slider-wrapper {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.itc-slider-item {
+  display: flex;
+  justify-content: center;
+}
+
+.card__slide {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .itc-slider-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .itc-slider-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+.card {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid red;
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.card-section {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 12px;
+  line-height: 1;
+}
+
+.card-title {
+  background: #fafafa;
+  color: #424242;
+  white-space: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  padding: 10px 15px;
+  margin: 0;
+  height: 72px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fafafa;
+  padding: 10px 15px 15px;
+  color: #616161;
+}
+
+.card-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card-author {
+  margin-left: 6px;
+}
+
+.card-icon {
+  margin-left: auto;
+  width: 18px;
+  max-height: 20px;
+}
+
+.card-views {
+  margin-left: 6px;
+}
+
+.itc-slider-indicators {
+  bottom: -50px;
+}
+
+.itc-slider-indicator {
+  background-color: rgba(192, 217, 184, 1);
+}
+
+.itc-slider-indicator-active {
+  background-color: rgba(71, 165, 66, 1);
+}
+
+.slider__container {
+  width: 300px;
+  height: 227px;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+.slider__container img {
+  object-fit: contain;
+  max-width: 260px;
+}
