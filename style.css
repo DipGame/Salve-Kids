@@ -1337,6 +1337,8 @@ footer .record {
     padding: 0px 40px;
     background-color: #FFF;
     position: relative;
+    margin-top: 25px;
+    cursor: pointer;
 }
 
 .answer__container {
@@ -1362,12 +1364,19 @@ footer .record {
     transition: all 0.25s;
 }
 
-.answer.open>.test {
-    max-height: 120px;
-    transition: all 0.4s;
+.answer__text {
+    /* margin-bottom: 10px; */
 }
 
+.answer.open>.answer__text {
+    max-height: 120px;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
 
+.before-after {
+    margin-top: 107px;
+}
 
 
 .team-page {
