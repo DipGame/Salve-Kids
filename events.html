@@ -13,51 +13,80 @@
 
 <body>
     <div class="page">
-        <header>
-            <div class="container__top">
-                <a href="http://127.0.0.1:5500/main.html"><img class="logo" src="/images/image 2 (1).png"
+        <header class="header"> <!-- header -->
+            <div class="header-mobile">
+                <button><img id="header-mobile__open-block" class="header-mobile__menu" src="/images/Меню.svg" alt="image"></button>
+                <a href="http://127.0.0.1:5500/main.html"><img class="header-mobile__logo" src="/images/Лого.png"
                         alt="Logo"></a>
-                <h1>центр детской стоматологии</h1>
-                <div class="container__top__connect">
-                    <div class="telephone">
-                        <img class="phone" src="/images/phone (1).png" alt="phone">
-                        <p>
-                            98-00-59
-                        </p>
-                    </div>
-                    <p class="address">
-                        Сургут, Университетская 15
+                <img class="header-mobile__phone" src="/images/Телефон.png" alt="telephone">
+            </div>
+            <div class="header-mobile__bottom">
+                <div>
+                    <img src="/images/Меню.svg" alt="menu">
+                    <p>
+                        Меню
                     </p>
                 </div>
-
-                <button class="record">Запись на прием</button>
+                <div>
+                    <img src="/images/phone.svg" alt="phone">
+                    <p>
+                        Позвонить
+                    </p>
+                </div>
+                <div>
+                    <img src="/images/email (11) 2.svg" alt="message">
+                    <p>
+                        Написать
+                    </p>
+                </div>
+                <div>
+                    <img src="/images/arrow (1).svg" alt="up">
+                    <p>
+                        Наверх
+                    </p>
+                </div>
             </div>
-            <nav class="menu">
-                <ul>
-                    <li>
-                        <a href="http://127.0.0.1:5500/service.html">Услуги</a>
-                        <img class="menu__add" src="/images/arrow.svg" alt="but">
-                    </li>
-                    <img src="/images/Ellipse 24.svg" alt="elipse">
-                    <li><a href="http://127.0.0.1:5500/prices.html">Цены</a></li>
-                    <img src="/images/Ellipse 24.svg" alt="elipse">
-                    <li><a href="http://127.0.0.1:5500/team.html">Наша команда</a></li>
-                    <img src="/images/Ellipse 24.svg" alt="elipse">
-                    <li><a href="http://127.0.0.1:5500/stocks.html">Акции</a></li>
-                    <img src="/images/Ellipse 24.svg" alt="elipse">
-                    <li><a href="http://127.0.0.1:5500/events.html">Мероприятия</a></li>
-                    <img src="/images/Ellipse 24.svg" alt="elipse">
-                    <li><a href="http://127.0.0.1:5500/map.html">Контакты</a></li>
-                    <li><a href="#">Взрослая стоматология</a></li>
-                </ul>
-            </nav>
-            <nav class="string__menu">
-                <ul>
-                    <li><a href="http://127.0.0.1:5500/main.html">Главная</a></li>
-                    <p>/</p>
-                    <li><a href="#">Мероприятия</a></li>
-                </ul>
-            </nav>
+            <div class="header-mobile__container">
+                
+                <div class="container__top">
+                    <a href="http://127.0.0.1:5500/main.html"><img class="logo" src="/images/image 2 (1).png"
+                            alt="Logo"></a>
+                    <h1>центр детской стоматологии</h1>
+                    <div class="container__top__connect">
+                        <div class="telephone">
+                            <img class="phone" src="/images/phone (1).png" alt="phone">
+                            <p>
+                                98-00-59
+                            </p>
+                        </div>
+                        <p class="address">
+                            Сургут, Университетская 15
+                        </p>
+                    </div>
+
+                    <button class="record">Запись на прием</button>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <a href="http://127.0.0.1:5500/service.html">Услуги</a>
+                            <img class="menu__add" src="/images/arrow.svg" alt="but">
+                        </li>
+                        <img class="menu__point" src="/images/Ellipse 24.svg" alt="elipse">
+                        <li><a href="http://127.0.0.1:5500/prices.html">Цены</a></li>
+                        <img class="menu__point" src="/images/Ellipse 24.svg" alt="elipse">
+                        <li><a href="http://127.0.0.1:5500/team.html">Наша команда</a></li>
+                        <img class="menu__point" src="/images/Ellipse 24.svg" alt="elipse">
+                        <li><a href="http://127.0.0.1:5500/stocks.html">Акции</a></li>
+                        <img class="menu__point" src="/images/Ellipse 24.svg" alt="elipse">
+                        <li><a href="http://127.0.0.1:5500/events.html">Мероприятия</a></li>
+                        <img class="menu__point" src="/images/Ellipse 24.svg" alt="elipse">
+                        <li><a href="http://127.0.0.1:5500/map.html">Контакты</a></li>
+                        <li><a href="#">Взрослая стоматология</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button id="header-mobile__close-block"><img src="/images/Меню (1).svg" alt="button"></button>
         </header>
 
         <main class="events-page">

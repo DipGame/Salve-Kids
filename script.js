@@ -1,8 +1,6 @@
 // Начало Скрипта для вопрос - ответ
 const btnsDropdown = document.querySelectorAll('.answer');
 
-// "/images/ico (2).svg"
-// e.target.offsetParent.children.id
 btnsDropdown.forEach(btn => {
     btn.addEventListener('click', function (e) {
         e.target.offsetParent.classList.toggle('open');
@@ -17,5 +15,20 @@ btnsDropdown.forEach(btn => {
         
     })
 })
-
 // Конец Скрипта для вопрос - ответ
+
+// Начало Скрипта выдвижения окна слева
+const headerSection = document.querySelector(".header");
+const btnOpenWindow = headerSection.querySelector("#header-mobile__open-block");
+const containerWindow = headerSection.querySelector('.header-mobile__container');
+const btnCloseWindow = headerSection.querySelector('#header-mobile__close-block');
+
+btnOpenWindow.addEventListener('click', function () {
+    containerWindow.style.setProperty("left", "0px");
+    btnCloseWindow.style.setProperty("left", "0px");
+})
+btnCloseWindow.addEventListener('click', function () {
+    containerWindow.style.setProperty("left", "-390px");
+    btnCloseWindow.style.setProperty("left", "-390px");
+})
+// Конец Скрипта выдвижения окна слева
