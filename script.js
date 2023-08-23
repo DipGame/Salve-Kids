@@ -34,44 +34,46 @@ btnCloseWindow.addEventListener('click', function () {
 // Конец Скрипта выдвижения окна слева
 
 // Начало Скрипта сокращение колличства карточек врачей в зависимости от ширины экрана
-const expertsSection = document.querySelector('.experts');
-const expertCard = expertsSection.querySelectorAll('.expert__card');
-const expertProf = expertsSection.querySelectorAll('.experts__prof');
+// const expertsSection = document.querySelector('.experts');
+// const expertCard = expertsSection.querySelectorAll('.expert__card');
+// const expertProf = expertsSection.querySelectorAll('.experts__prof');
 
-window.onresize = resize;
+// window.onresize = resize;
 
-function hiddenTitle() {
-    expertProf.forEach(el => {
-        el.style.setProperty("visibility", "hidden");
-        el.style.setProperty("height", "0");
-    })
-}
+// function hiddenTitle() {
+//     expertProf.forEach(el => {
+//         el.style.setProperty("visibility", "hidden");
+//         el.style.setProperty("height", "0");
+//         el.style.setProperty("overflow", "hidden");
+//     })
+// }
 
-function visibileTitle() {
-    expertProf.forEach(el => {
-        el.style.setProperty("visibility", "visible");
-        el.style.setProperty("height", "auto");
-    })
-}
+// function visibileTitle() {
+//     expertProf.forEach(el => {
+//         el.style.setProperty("visibility", "visible");
+//         el.style.setProperty("height", "auto");
+//     })
+// }
 
-function wdindowScreen() {
-    for (let index = 0; index < expertCard.length; index++) {
-        const element = expertCard[index];
-        if (window.screen.width < 670 && index > 2) {
-            element.style.setProperty("visibility", "hidden");
-            element.style.setProperty("height", "0")
-            hiddenTitle()
-        } else {
-            element.style.setProperty("visibility", "visible");
-            element.style.setProperty("height", "auto")
-            visibileTitle()
-        }
-    }
-}
+// function wdindowScreen() {
+//     for (let index = 0; index < expertCard.length; index++) {
+//         const element = expertCard[index];
+//         if (window.screen.width < 670 && index > 2) {
+//             element.style.setProperty("visibility", "hidden");
+//             element.style.setProperty("height", "0");
+//             element.style.setProperty("margin", "0");
+//             hiddenTitle()
+//         } else {
+//             element.style.setProperty("visibility", "visible");
+//             element.style.setProperty("height", "auto")
+//             visibileTitle()
+//         }
+//     }
+// }
 
-wdindowScreen();
+// wdindowScreen();
 
-function resize() {
-    wdindowScreen();
-}
+// function resize() {
+//     wdindowScreen();
+// }
 // Конец Скрипта сокращение колличства карточек врачей в зависимости от ширины экрана
