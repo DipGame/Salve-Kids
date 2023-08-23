@@ -237,7 +237,7 @@ header {
     .header-mobile__bottom div {
         display: flex;
         flex-direction: column;
-        width: 45px;
+        width: 72px;
         justify-content: center;
         align-items: center;
     }
@@ -1462,7 +1462,8 @@ main {
 }
 
 .expert__card {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     margin: 0;
 }
 
@@ -1576,7 +1577,7 @@ main {
 @media (max-width: 757px) {
     .reviews__container {
         flex-direction: column;
-        align-items: center;
+
         margin-top: 10px;
     }
 }
@@ -1763,6 +1764,11 @@ main {
     width: 190px;
 }
 
+.doctor-page .reviews .itc-slider {
+    visibility: hidden;
+    height: 0;
+}
+
 @media (max-width: 1225px) {
     .doctor-page .reviews__container {
         justify-content: start;
@@ -1772,14 +1778,35 @@ main {
         display: flex;
         flex-direction: column;
         width: auto;
+        margin-right: 20px;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 757px) {
     .doctor-page .reviews__container {
         flex-direction: column;
+        align-items: center;
     }
-    .doctor-page .all-bth {
+
+    .doctor-page .reviews .itc-slider {
+        visibility: visible;
+        height: auto;
+    }
+
+    .doctor-page .reviews__bth {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+    }
+
+    .doctor-page .container:last-of-type {
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        margin: 0;
+    }
+
+    .doctor-page .reviews .itc-slider-btn {
         visibility: hidden;
     }
 }
@@ -1886,6 +1913,12 @@ footer {
     background-color: #FFF;
     min-height: 465px;
     padding: 0 20px;
+}
+
+@media (max-width: 375px) {
+    footer {
+        padding-bottom: 80px;
+    }
 }
 
 .footer__container {
@@ -2814,7 +2847,9 @@ footer .record {
 }
 
 .more-doctors {
-    margin-top: 90px;
+    margin: 90px auto 0;
+    padding: 0 20px;
+    max-width: 1290px;
 }
 
 .more-doctors .title-h3 {
@@ -2824,6 +2859,74 @@ footer .record {
     line-height: 58px;
     letter-spacing: 0em;
     text-align: left;
+}
+
+.more-doctors .itc-slider-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.more-doctors .itc-slider-indicators {
+    visibility: visible;
+}
+
+@media (max-width: 1290px) {
+    .more-doctors .itc-slider-item {
+        flex: 0 0 33.33333333333%;
+        max-width: 33.33333333333%;
+    }
+
+    .more-doctors .container__slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .more-doctors .itc-slider-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .more-doctors .container__slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 668px) {
+    .more-doctors .itc-slider-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .more-doctors .container__slider {
+        max-width: 100%;
+    }
+
+    .more-doctors .itc-slider-btn {
+        visibility: hidden;
+    }
+}
+
+
+@media (max-width: 375px) {
+    .more-doctors .title-h3 {
+        font-family: Rostov;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .more-doctors .itc-slider-btn {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 343px) {
+    .more-doctors .container__slider {
+        padding: 0;
+    } 
 }
 
 .price-page {
