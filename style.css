@@ -626,24 +626,25 @@ header {
 main {
     max-width: 1920px;
     margin: 0 auto;
-    padding: 0 20px;
 }
 
 .baner {
     display: flex;
     justify-content: space-between;
     margin: 17px 0 0 0;
+    max-width: 1920px;
     overflow: hidden;
+    position: relative;
 }
 
 .baner .baner__container {
-    border: 1px solid red;
     margin: 0;
-    max-width: 100%;
+    width: 100%;
     height: 590px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .baner .baner__container:first-of-type {
@@ -675,12 +676,76 @@ main {
     letter-spacing: 0em;
     text-align: center;
     margin: 58px auto 0;
+    word-break: break-all;
+    padding: 0 10px;
 }
 
 .baner__container img {
-    object-fit: contain;
+    object-fit: cover;
+    width: 100%;
     max-width: 350px;
     margin: 0 auto 0;
+}
+
+.baner .container__slider {
+    visibility: hidden;
+    position: absolute;
+}
+
+.baner .itc-slider-btn {
+    visibility: hidden;
+}
+
+@media (max-width: 1795px) {
+    .baner__container h3 {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 945px) {
+    .baner {
+        margin: 0;
+        overflow: visible;
+    }
+
+    .baner .container__slider {
+        visibility: visible;
+        position: static;
+        max-width: 100%;
+    }
+
+    .baner .baner__container {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .baner .itc-slider .baner__container {
+        position: static;
+        visibility: visible;
+    }
+
+    .baner .itc-slider {
+        visibility: visible;
+        margin: 0;
+    }
+
+    .baner .itc-slider-btn-prev {
+        left: 20px;
+    }
+
+    .baner .itc-slider-btn-next {
+        right: 20px;
+    }
+
+    .baner .itc-slider-btn {
+        visibility: visible;
+    }
+
+    .baner .itc-slider-indicators {
+        visibility: visible;
+        height: auto;
+        bottom: 0;
+    }
 }
 
 .advantages {
@@ -688,6 +753,7 @@ main {
     max-width: 1324px;
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
 }
 
 @media (max-width: 555px) {
@@ -888,6 +954,7 @@ main {
 .services-and-prices {
     max-width: 1290px;
     margin: 107px auto 0;
+    padding: 0 20px;
 }
 
 @media (max-width: 945px) {
@@ -1228,7 +1295,7 @@ main {
 }
 
 @media (max-width: 875px) {
-    .services-and-prices .services-and-prices .stock p {
+    .services-and-prices .stock p {
         font-family: Exo;
         font-size: 18px;
         font-weight: 400;
@@ -1300,7 +1367,7 @@ main {
 }
 
 @media (max-width: 545px) {
-    .stock button {
+    .services-and-prices .stock button {
         width: 90px;
         height: 35px;
         font-family: Exo 2.0;
@@ -1327,12 +1394,48 @@ main {
     visibility: hidden;
 }
 
+.main-slider {
+    padding: 0 20px;
+}
+
+@media (max-width: 1332px) {
+    .main-slider .itc-slider-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .main-slider .container__slider {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 882px) {
+    .main-slider .itc-slider-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .main-slider .container__slider {
+        max-width: 100%;
+    }
+
+    .main-slider .itc-slider-btn {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 375px) {
+    .main-slider .main-slider__card {
+        padding: 74px 0 0 30px;
+    }
+}
+
 @media (max-width: 1087px) {
     .container__slider .itc-slider-indicators {
         visibility: visible;
     }
 
-    .main .container__slider .itc-slider-btn {
+    .main-slider .container__slider .itc-slider-btn {
         visibility: hidden;
     }
 }
@@ -1342,6 +1445,7 @@ main {
     max-width: 1290px;
     display: flex;
     flex-direction: column;
+    padding: 0 20px;
 }
 
 @media (max-width: 1087px) {
@@ -1755,6 +1859,64 @@ main {
     margin: 40px auto 0;
 }
 
+.main .reviews {
+    padding: 0 20px;
+}
+
+.main .logo {
+    visibility: visible;
+    width: 190px;
+}
+
+.main .reviews .itc-slider {
+    visibility: hidden;
+    height: 0;
+}
+
+@media (max-width: 1225px) {
+    .main .reviews__container {
+        justify-content: start;
+    }
+
+    .main .reviews__container .container:last-of-type {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 757px) {
+    .main .reviews__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main .reviews .itc-slider {
+        visibility: visible;
+        height: auto;
+    }
+
+    .main .reviews__bth {
+        visibility: hidden;
+        height: 0;
+        margin: 0;
+    }
+
+    .main .container:last-of-type {
+        visibility: hidden;
+        overflow: hidden;
+        height: 0;
+        margin: 0;
+    }
+
+    .main .reviews .itc-slider-btn {
+        visibility: hidden;
+    }
+}
+
+/* dsdsd */
+
 .doctor-page .reviews__container {
     flex-direction: row-reverse;
 }
@@ -1814,6 +1976,7 @@ main {
 .prev {
     max-width: 1315px;
     margin: 107px auto 0;
+    padding: 0 20px;
 }
 
 .prev h2 {
@@ -1826,9 +1989,77 @@ main {
     max-width: 900px;
 }
 
+.prev .itc-slider-item img {
+    width: 100%;
+    max-width: 410px;
+}
+
+.prev__container {
+    margin-top: 40px;
+}
+
+@media (max-width: 1290px) {
+    .prev .itc-slider-item {
+        flex: 0 0 33.33333333333%;
+        max-width: 33.33333333333%;
+    }
+
+    .prev .container__slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1300px) {
+    .prev .itc-slider-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .prev .container__slider {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 898px) {
+    .prev {
+        margin-top: 70px;
+    }
+
+    .prev .itc-slider-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .prev .itc-slider {
+        margin-top: 30px;
+    }
+
+    .prev .container__slider {
+        max-width: 100%;
+    }
+
+    .prev .itc-slider-btn {
+        visibility: hidden;
+    }
+
+    .prev h2 {
+        font-family: Rostov;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .prev__container {
+        margin-top: 0;
+    }
+}
+
 .bottom__text {
     margin: 107px auto 0;
     max-width: 1290px;
+    padding: 0 20px;
 }
 
 @media (max-width: 375px) {
@@ -2140,6 +2371,7 @@ footer .record {
 
 .service-page {
     max-width: 1290px;
+    padding: 0 20px;
 }
 
 .service-page-baner {
@@ -2226,6 +2458,18 @@ footer .record {
     right: 100px;
 }
 
+@media (max-width: 968px) {
+    .service-page-baner__container-top img {
+        right: 50px;
+    }
+}
+
+@media (max-width: 795px) {
+    .service-page-baner__container-top img {
+        right: 10px;
+    }
+}
+
 @media (max-width: 470px) {
     .service-page-baner__container-top img {
         position: static;
@@ -2238,7 +2482,7 @@ footer .record {
     margin-top: 140px;
     justify-items: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
 }
 
