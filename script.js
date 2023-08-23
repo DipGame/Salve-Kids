@@ -17,25 +17,25 @@ btnsDropdown.forEach(btn => {
 })
 // Конец Скрипта для вопрос - ответ
 
-// // Начало Скрипта выдвижения окна слева
-// const headerSection = document.querySelector(".header");
-// const btnOpenWindow = headerSection.querySelector("#header-mobile__open-block");
-// const containerWindow = headerSection.querySelector('.header-mobile__container');
-// const btnCloseWindow = headerSection.querySelector('#header-mobile__close-block');
+// Начало Скрипта выдвижения окна слева
+const headerSection = document.querySelector(".header");
+const btnOpenWindow = headerSection.querySelector("#header-mobile__open-block");
+const containerWindow = headerSection.querySelector('.header-mobile__container');
+const btnCloseWindow = headerSection.querySelector('#header-mobile__close-block');
 
-// btnOpenWindow.addEventListener('click', function () {
-//     containerWindow.style.setProperty("left", "0px");
-//     btnCloseWindow.style.setProperty("left", "0px");
-// })
-// btnCloseWindow.addEventListener('click', function () {
-//     containerWindow.style.setProperty("left", "-390px");
-//     btnCloseWindow.style.setProperty("left", "-390px");
-// })
+btnOpenWindow.addEventListener('click', function () {
+    containerWindow.style.setProperty("left", "0px");
+    btnCloseWindow.style.setProperty("left", "0px");
+})
+btnCloseWindow.addEventListener('click', function () {
+    containerWindow.style.setProperty("left", "-390px");
+    btnCloseWindow.style.setProperty("left", "-390px");
+})
 // Конец Скрипта выдвижения окна слева
 
 // Начало Скрипта сокращение колличства карточек врачей в зависимости от ширины экрана
 const expertsSection = document.querySelector('.experts');
-const expertCard = expertsSection.querySelectorAll('.expert__card'); 
+const expertCard = expertsSection.querySelectorAll('.expert__card');
 const expertProf = expertsSection.querySelectorAll('.experts__prof');
 
 window.onresize = resize;
@@ -54,7 +54,7 @@ function visibileTitle() {
     })
 }
 
-function wdindowScreen () {
+function wdindowScreen() {
     for (let index = 0; index < expertCard.length; index++) {
         const element = expertCard[index];
         if (window.screen.width < 670 && index > 2) {

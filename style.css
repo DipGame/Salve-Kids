@@ -231,6 +231,7 @@ header {
         background-color: rgba(71, 165, 66, 1);
         justify-content: space-between;
         padding: 0 20px;
+        z-index: 5;
     }
 
     .header-mobile__bottom div {
@@ -1753,6 +1754,36 @@ main {
     margin: 40px auto 0;
 }
 
+.doctor-page .reviews__container {
+    flex-direction: row-reverse;
+}
+
+.doctor-page .logo {
+    visibility: visible;
+    width: 190px;
+}
+
+@media (max-width: 1225px) {
+    .doctor-page .reviews__container {
+        justify-content: start;
+    }
+
+    .doctor-page .reviews__container .container:last-of-type {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .doctor-page .reviews__container {
+        flex-direction: column;
+    }
+    .doctor-page .all-bth {
+        visibility: hidden;
+    }
+}
+
 .prev {
     max-width: 1315px;
     margin: 107px auto 0;
@@ -1773,7 +1804,7 @@ main {
     max-width: 1290px;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 375px) {
     .bottom__text {
         margin-top: 70px;
     }
@@ -1789,7 +1820,7 @@ main {
     color: rgba(215, 72, 85, 1);
 }
 
-@media (max-width: 370px) {
+@media (max-width: 375px) {
     .bottom__text h3 {
         font-family: Exo 2.0;
         font-size: 36px;
@@ -1810,7 +1841,7 @@ main {
     margin-top: 19px;
 }
 
-@media (max-width: 370px) {
+@media (max-width: 375px) {
     .bottom__text p {
         font-family: Exo 2.0;
         font-size: 14px;
@@ -1862,7 +1893,6 @@ footer {
     margin: 107px auto 0;
     max-width: 1290px;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 @media (max-width: 945px) {
@@ -2461,20 +2491,8 @@ footer .record {
     justify-content: space-between;
 }
 
-@media (max-width: 660px) {
-    .doctor-baner {
-        flex-direction: column;
-    }
-}
-
 .doctor-baner__container {
     margin-top: 20px;
-}
-
-@media (max-width: 660px) {
-    .doctor-baner__container {
-        margin-top: 45px;
-    }
 }
 
 .doctor-baner__container h2 {
@@ -2486,17 +2504,6 @@ footer .record {
     text-align: left;
 }
 
-@media (max-width: 660px) {
-    .doctor-baner__container h2 {
-        font-family: Rostov;
-        font-size: 48px;
-        font-weight: 400;
-        line-height: 58px;
-        letter-spacing: 0em;
-        text-align: left;
-    }
-}
-
 .doctor-baner__container h2 span {
     font-family: Rostov;
     font-size: 64px;
@@ -2504,17 +2511,6 @@ footer .record {
     line-height: 70px;
     letter-spacing: 0em;
     color: rgba(215, 72, 85, 1);
-}
-
-@media (max-width: 660px) {
-    .doctor-baner__container h2 span {
-        font-family: Rostov;
-        font-size: 48px;
-        font-weight: 400;
-        line-height: 58px;
-        letter-spacing: 0em;
-        text-align: left;
-    }
 }
 
 .doctor-baner__container h3 {
@@ -2545,6 +2541,45 @@ footer .record {
 .doctor-baner img {
     object-fit: contain;
     margin-left: 15px;
+}
+
+@media (max-width: 730px) {
+    .doctor-baner {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .doctor-baner__container h2 {
+        font-family: Rostov;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .doctor-baner__container h2 span {
+        font-family: Rostov;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .doctor-baner__container h3 {
+        margin-top: 390px;
+    }
+
+    .doctor-baner img {
+        position: absolute;
+        bottom: 210px;
+        left: 0;
+        right: 0;
+        margin: 0 auto 0;
+        width: 100%;
+        height: 368px;
+    }
 }
 
 .education {
@@ -2732,6 +2767,52 @@ footer .record {
     margin-top: 27px;
 }
 
+.docs .itc-slider-item {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.docs .itc-slider-indicators {
+    visibility: visible;
+}
+
+@media (max-width: 1290px) {
+    .docs .itc-slider-item {
+        flex: 0 0 33.33333333333%;
+        max-width: 33.33333333333%;
+    }
+
+    .docs .container__slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .docs .itc-slider-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .docs .container__slider {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 668px) {
+    .docs .itc-slider-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .docs .container__slider {
+        max-width: 100%;
+    }
+
+    .docs .itc-slider-btn {
+        visibility: hidden;
+    }
+}
+
 .more-doctors {
     margin-top: 90px;
 }
@@ -2785,41 +2866,118 @@ footer .record {
 
 .prices-services__container {
     margin-top: 56px;
-    position: relative;
 }
 
 .prices-services__container .service {
-    position: relative;
-    flex-direction: column;
+    flex-direction: row;
     border-radius: 35px;
     background-color: #FFF;
     border-bottom: none;
+    justify-content: space-between;
+    padding: 0 80px 0 110px;
 }
 
-.prices-services__container .service h3 {
+.prices-services__container .service .service__card {
+    flex-direction: row;
+    width: 100%;
+    max-width: 740px;
+    margin: 0 20px 0 0;
+}
+
+.prices-services__container .service__card h3 {
     font-family: Exo 2.0;
     font-size: 30px;
     font-weight: 400;
     line-height: 36px;
     letter-spacing: 0em;
     text-align: left;
-    margin: 60px 0 0 110px;
+    margin: 60px 0 0;
     max-width: 500px;
 }
 
-.prices-services__container .service .price {
-    margin: 25px 0 40px 110px;
-    width: 100%;
-    max-width: 740px;
-}
-
-.prices-services__container .service img {
-    position: absolute;
-    top: -50px;
-    right: 110px;
-    width: 300px;
+.prices-services__container img {
+    margin-top: -70px;
     object-fit: contain;
 }
+
+.prices-services__container .service__card .price {
+    margin: 25px 0 40px;
+    width: 100%;
+    max-width: 740px;
+    margin-right: 20px;
+}
+
+.prices-services__container .service .price ul li p {
+    color: rgba(71, 165, 66, 1);
+    text-decoration: underline;
+}
+
+@media (max-width: 988px) {
+    .prices-services h2 {
+        font-family: Rostov;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .prices-services__filter {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .prices-services__container {
+        margin: 37px 0 0;
+    }
+
+    .prices-services__container .service {
+        flex-direction: column;
+        width: 100%;
+        max-width: 740px;
+        margin-top: 10px;
+        padding: 30px 20px 45px;
+        margin: 30px auto 0;
+    }
+
+    .prices-services__container .service .service__card {
+        margin: 0;
+        padding: 0;
+    }
+
+    .prices-services__container .service .service__card h3 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .prices-services__container .service img {
+        margin: 0;
+        padding: 0;
+    }
+
+    .prices-services__container .service .price ul li p {
+        font-family: Exo 2.0;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        display: inline;
+    }
+
+    .prices-services__container .service .price ul li span {
+        font-family: Exo 2.0;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: right;
+    }
+}
+
 
 .bottom__text ul li:first-of-type {
     margin-top: 20px;
@@ -2903,14 +3061,17 @@ footer .record {
         letter-spacing: 0em;
         text-align: left;
     }
+
     .events-page-container__card {
         flex-direction: column;
         padding-bottom: 110px;
         position: relative;
     }
+
     .events-page-container__card h3 {
         margin-bottom: 20px;
     }
+
     .events-page-container .all-bth {
         position: absolute;
         bottom: 30px;
