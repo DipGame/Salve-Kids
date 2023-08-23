@@ -2507,6 +2507,28 @@ footer .record {
     margin-top: 107px;
 }
 
+.before-after .itc-slider-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.before-after .ba-slider {
+    max-width: 630px;
+}
+
+@media (max-width: 1290px) {
+    .before-after .itc-slider-item {
+        flex: 0 0 33.33333333333%;
+        max-width: 33.33333333333%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .before-after .itc-slider-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
 
 .team-page {
     max-width: 1290px;
@@ -2926,7 +2948,7 @@ footer .record {
 @media (max-width: 343px) {
     .more-doctors .container__slider {
         padding: 0;
-    } 
+    }
 }
 
 .price-page {
