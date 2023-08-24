@@ -14,6 +14,7 @@
 
 <body>
     <div class="page">
+
         <header class="header">
             <div class="header-mobile">
                 <button><img id="header-mobile__open-block" class="header-mobile__menu" src="/images/Меню.svg"
@@ -88,12 +89,20 @@
                     </ul>
                 </nav>
             </div>
-            <button id="header-mobile__close-block"><img src="/images/Меню (1).svg" alt="button"></button>
+            <button class="header-mobile__close-block"><img src="/images/Меню (1).svg" alt="button"></button>
         </header>
 
 
         <main class="main">
-             <section class="baner">
+            <!-- <img class="cloud" style="top: 1234px;" src="/images/cloud 1.svg" alt="cloud">
+            <img class="cloud" style="top: 608px; right: 0;" src="/images/cloud 2.svg" alt="cloud">
+            <img class="cloud" style="top: 2494px; right: 0;" src="/images/cloud 3.svg" alt="cloud">
+            <img class="cloud" style="top: 3239px;" src="/images/cloud 3 (1).svg" alt="cloud">
+            <img class="cloud" style="top: 4637px; right: 0;" src="/images/cloud 4.svg" alt="cloud">
+            <img class="cloud" style="top: 5657px;" src="/images/cloud 5.svg" alt="cloud">
+            <img class="cloud" style="top: 5962px; right: 0;" src="/images/Vector 6.svg" alt="cloud">
+            <img class="cloud" style="top: 6559px;" src="/images/Vector (4).svg" alt="cloud"> -->
+            <section class="baner">
                 <div class="container__slider">
 
                     <div class="itc-slider" data-autoplay="true" data-interval="5000" data-loop="true"
@@ -108,7 +117,7 @@
                                         <img src="/images/8L1A3285 1.png" alt="kid">
                                     </div>
                                 </div>
-                                <div class="itc-slider-item" >
+                                <div class="itc-slider-item">
                                     <div class="baner__container" style="background: rgba(255, 209, 180, 1);">
                                         <h3>
                                             Исправление<br> прикуса
@@ -116,7 +125,7 @@
                                         <img src="/images/8L1A3575 1.png" alt="kid">
                                     </div>
                                 </div>
-                                <div class="itc-slider-item" >
+                                <div class="itc-slider-item">
                                     <div class="baner__container" style="background-color: rgba(205, 245, 159, 1);">
                                         <h3>
                                             Лечение зубов
@@ -124,7 +133,7 @@
                                         <img src="/images/8L1A3366 1.png" alt="kid">
                                     </div>
                                 </div>
-                                <div class="itc-slider-item" >
+                                <div class="itc-slider-item">
                                     <div class="baner__container" style="background: rgba(198, 233, 246, 1);">
                                         <h3>
                                             Профилактический <br>осмотр
@@ -132,7 +141,7 @@
                                         <img src="/images/8L1A3264 1.png" alt="kid">
                                     </div>
                                 </div>
-                                <div class="itc-slider-item" >
+                                <div class="itc-slider-item">
                                     <div class="baner__container" style="background: rgba(255, 180, 180, 1);">
                                         <h3>
                                             Коррекция <br>сложных<br> паталогий
@@ -183,8 +192,8 @@
                     </h3>
                     <img src="/images/8L1A3356 1.png" alt="kid">
                 </div>
-            </section> 
-             <section class="advantages">
+            </section>
+            <section class="advantages">
                 <div class="container">
                     <h3>
                         <span>Salve</span> <span>K</span><span>i</span><span>d</span><span>s</span> <br> это лечение без
@@ -290,8 +299,8 @@
                         </div>
                     </div>
                 </div>
-            </section>  
-             <section class="services-and-prices">
+            </section>
+            <section class="services-and-prices">
                 <h2>
                     Услуги и цены
                 </h2>
@@ -474,8 +483,8 @@
                         </div>
                     </div>
                 </div>
-            </section> 
-             <div class="main-slider">
+            </section>
+            <div class="main-slider">
                 <div class="container__slider">
 
                     <div class="itc-slider" data-autoplay="true" data-interval="5000" data-loop="true"
@@ -539,8 +548,8 @@
                         </ol>
                     </div>
                 </div>
-            </div> 
-             <section class="experts">
+            </div>
+            <section class="experts">
                 <h2>Наши врачи</h2>
                 <p class="experts__quantity">12 экспертов, средний опыт работы 15 лет</p>
                 <div class="experts__grid__container">
@@ -594,8 +603,8 @@
                     </div>
                 </div>
                 <button class="all-bth">Все врачи</button>
-            </section> 
-             <section class="reviews">
+            </section>
+            <section class="reviews">
                 <h2>
                     Отзывы
                 </h2>
@@ -794,7 +803,7 @@
                     </ol>
                 </div>
 
-            </section> 
+            </section>
             <section class="prev">
                 <h2>
                     Ознакомьтесь с нашей клиникой перед посещением
@@ -844,13 +853,37 @@
                 <h3>
                     Детская стоматология в Сургуте
                 </h3>
-                <p>
-                    В современной стоматологии подход к лечению зубов у детей особый. Это связано с психическим
-                    состоянием маленького пациента во время визита в клинику, анатомическими возрастными особенностями и
-                    доступностью используемых методик. Для того чтобы услуги соответствовали современным требованиям и
-                    были безопасными, лечением патологий зубочелюстной системы у детей занимается отдельное направление
-                    — детская стоматология.
-                </p>
+                <div class="bottom__text-box">
+                    <p id="bottomText">
+                        В современной стоматологии подход к лечению зубов у детей особый. Это связано с психическим
+                        состоянием маленького пациента во время визита в клинику, анатомическими возрастными
+                        особенностями и
+                        доступностью используемых методик. Для того чтобы услуги соответствовали современным
+                        требованиям
+                        и
+                        были безопасными, лечением патологий зубочелюстной системы у детей занимается отдельное
+                        направление
+                        — детская стоматология.
+                        В современной стоматологии подход к лечению зубов у детей особый. Это связано с психическим
+                        состоянием маленького пациента во время визита в клинику, анатомическими возрастными
+                        особенностями и
+                        доступностью используемых методик. Для того чтобы услуги соответствовали современным
+                        требованиям
+                        и
+                        были безопасными, лечением патологий зубочелюстной системы у детей занимается отдельное
+                        направление
+                        — детская стоматология.
+                        В современной стоматологии подход к лечению зубов у детей особый. Это связано с психическим
+                        состоянием маленького пациента во время визита в клинику, анатомическими возрастными
+                        особенностями и
+                        доступностью используемых методик. Для того чтобы услуги соответствовали современным
+                        требованиям
+                        и
+                        были безопасными, лечением патологий зубочелюстной системы у детей занимается отдельное
+                        направление
+                        — детская стоматология.
+                    </p>
+                </div>
                 <div class="read__more">
                     <span>читать далее</span><img src="/images/Vector (2).svg" alt="вниз">
                     <div class="points"></div>
