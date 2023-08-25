@@ -24,7 +24,7 @@ btnsDropdown.forEach(btn => {
 // Начало Скрипта выдвижения окна слева
 const headerSection = document.querySelector(".header");
 const btnOpenWindow = headerSection.querySelectorAll("#header-mobile__open-block");
-const containerWindow = headerSection.querySelector('.header-mobile__container');
+const containerWindow = headerSection.querySelector('.header-mobile__box');
 const btnCloseWindow = headerSection.querySelector('.header-mobile__close-block');
 
 btnOpenWindow.forEach(btn => {

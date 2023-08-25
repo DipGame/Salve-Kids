@@ -203,19 +203,26 @@ header {
 }
 
 @media (max-width: 945px) {
-    .header-mobile__container {
-        display: flex;
-        flex-direction: column-reverse;
+    .header-mobile__box {
         height: 100vh;
         width: 100%;
         max-width: 375px;
-        justify-content: start;
-        position: fixed;
         transition: all 0.5s;
         z-index: 20;
         top: 70px;
         left: -390px;
+        position: fixed;
         background-color: rgba(244, 240, 233, 1);
+        overflow-y: scroll;
+    }
+
+    .header-mobile__box .header-mobile__container {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        top: 0;
+        position: absolute;
+        padding-bottom: 100vh;
     }
 }
 
@@ -361,6 +368,7 @@ header {
 
 .container__top__connect {
     margin: 0 42px 0 auto;
+    
 }
 
 @media (max-width: 945px) {
@@ -1856,6 +1864,7 @@ main {
 
         margin-top: 10px;
     }
+
     .main .reviews__container {
         visibility: hidden;
         position: absolute;
@@ -2588,7 +2597,8 @@ footer .record {
     }
 }
 
-footer .second__container h3, footer .second__container p {
+footer .second__container h3,
+footer .second__container p {
     color: rgba(160, 136, 113, 1);
     font-size: 14px;
 }
@@ -2597,6 +2607,7 @@ footer .second__container h3, footer .second__container p {
     footer .second__container ul {
         margin-bottom: 0px;
     }
+
     footer .second__container h3 {
         position: absolute;
         top: 661px;
