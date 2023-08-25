@@ -29,8 +29,13 @@ const btnCloseWindow = headerSection.querySelector('.header-mobile__close-block'
 
 btnOpenWindow.forEach(btn => {
     btn.addEventListener('click', function () {
-        containerWindow.classList.add('header-mobile__container-open');
-        btnCloseWindow.classList.add('header-mobile__container-open');
+        if (containerWindow.classList.contains('header-mobile__container-open')) {
+            containerWindow.classList.remove('header-mobile__container-open');
+            btnCloseWindow.classList.remove('header-mobile__container-open');
+        } else {
+            containerWindow.classList.add('header-mobile__container-open');
+            btnCloseWindow.classList.add('header-mobile__container-open');
+        }
     })
 })
 btnCloseWindow.addEventListener('click', function () {
