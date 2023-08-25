@@ -368,7 +368,7 @@ header {
 
 .container__top__connect {
     margin: 0 42px 0 auto;
-    
+
 }
 
 @media (max-width: 945px) {
@@ -1868,8 +1868,15 @@ main {
     .main .reviews__container {
         visibility: hidden;
         position: absolute;
+        width: 0;
+    }
+
+    .main .reviews__container .container img {
+        visibility: hidden;
+        position: absolute;
     }
 }
+
 
 .reviews__container .container:first-of-type {
     width: 300px;
