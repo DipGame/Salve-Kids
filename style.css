@@ -752,6 +752,7 @@ main {
     margin: 0 auto;
     position: relative;
 }
+
 .cloud {
     position: absolute;
     z-index: -5;
@@ -2834,6 +2835,7 @@ footer .second__container p {
     footer {
         min-height: 920px;
     }
+
     footer .second__container ul {
         margin-bottom: 0px;
     }
@@ -4036,6 +4038,7 @@ footer .second__container p {
     background-repeat: no-repeat;
     border-radius: 30px;
     padding: 0 0 0 50px;
+    margin: 0 auto 0;
 }
 
 .stocks-page .stocks-section__card h3 {
@@ -4070,7 +4073,6 @@ footer .second__container p {
     background: none;
     color: #FFF;
 }
-
 
 @media (max-width: 375px) {
     .stocks-page {
@@ -4135,8 +4137,10 @@ footer .second__container p {
     padding: 92px 40px 60px 60px;
     position: absolute;
     z-index: 2;
-    top: 198px;
-    left: 315px;
+    /* top: 198px;
+    left: 315px; */
+    top: 15%;
+    left: 10%;
 }
 
 .map-section__card h2 {
@@ -4238,4 +4242,10 @@ footer .second__container p {
     width: 20px;
     height: 20px;
     margin-right: 10px;
+}
+
+@media (max-width: 770px) {
+    .map-section__card {
+        
+    }
 }
