@@ -1,8 +1,135 @@
-// window.onresize = resize;
-
-// function resize() {
-
-// }
+// Начало настроек слайдера
+let swiper = new Swiper(".mySwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 0
+        },
+        945: {
+            slidesPerView: 5,
+            spaceBetween: 0
+        }
+    }
+});
+let swiperTwo = new Swiper(".mySwiperTwo", {
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    breakpoints: {
+        320: {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        1300: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+        }
+    }
+});
+let stocksSwiper = new Swiper(".stocksSwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        725: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        1032: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+    }
+});
+let prevSwiper = new Swiper(".prevSwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        896: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        1330: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
+    }
+});
+let docsSwiper = new Swiper(".docsSwiper", {
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        631: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        896: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        },
+        1330: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        }
+    }
+});
+// Конец настроек слайдера
 
 // Начало Скрипта для вопрос - ответ
 const btnsDropdown = document.querySelectorAll('.answer');
@@ -48,14 +175,34 @@ btnCloseWindow.addEventListener('click', function () {
 const hoverBtnMenu = headerSection.querySelector('.hover__btn-menu');
 const moreMenu = headerSection.querySelector('.header-hover__list');
 const arrowMenu = headerSection.querySelector('.menu__add');
-hoverBtnMenu.addEventListener('click', () => {
-    moreMenu.classList.toggle('header-hover__list_open');
+window.onresize = resize;
+
+function handleArrowMenuRotate() {
     if (moreMenu.classList.contains('header-hover__list_open')) {
         arrowMenu.classList.add('menu__add_rotate');
     } else {
         arrowMenu.classList.remove('menu__add_rotate');
     }
-})
+}
+
+function handleMoreMenuToggle() {
+    moreMenu.classList.toggle('header-hover__list_open');
+    handleArrowMenuRotate();
+}
+
+function lookScreenWidth() {
+    if (window.screen.width < 946) {
+        hoverBtnMenu.addEventListener('click', handleMoreMenuToggle);
+    } else {
+        hoverBtnMenu.removeEventListener('click', handleMoreMenuToggle);
+    }
+}
+
+lookScreenWidth();
+
+function resize() {
+    lookScreenWidth();
+}
 // Конец Скрипта выдвижение ховера услуг
 
 // Начало Скрипта кнопки для прокрутки наверх страницы(Должен быть после Скрипта выдвижения окна слева!!!)
